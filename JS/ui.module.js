@@ -86,8 +86,10 @@ export class UI {
 
   async hideLoader(section) {
     $("body").css("overflow", "auto");
-    $("#loader").fadeOut(1000, function () {
-      $(`${section}`).fadeIn(1000);
+    $(document).ready(function () {
+      $("#loader").fadeOut(1000, function () {
+        $(`${section}`).fadeIn(1000);
+      });
     });
   }
 }
