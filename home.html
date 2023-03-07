@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameMode ON</title>
+
+    <link
+      rel="shortcut icon"
+      href="Images/icons8-uplay-app.svg"
+      type="image/x-icon"
+    />
+
+    <!-- BootStrap Style -->
+    <link rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <!-- BootStrap Style -->
+
+    <!-- FontAwesome Style -->
+    <link rel="stylesheet" href="Styles/all.min.css" />
+    <!-- FontAwesome Style -->
+
+    <!-- My Own Style -->
+    <link rel="stylesheet" href="Styles/style.css" />
+    <!-- My Own Style -->
+  </head>
+  <body class="bg-dark">
+    <!-- Loader -->
+    <div id="loader">
+      <p>l</p>
+      <p>o</p>
+      <p>a</p>
+      <p>d</p>
+      <p>i</p>
+      <p>n</p>
+      <p>g</p>
+    </div>
+
+    <!-- Loader -->
+
+    <!-- Games Section -->
+    <section id="games">
+      <section id="background-game"></section>
+
+      <div class="container">
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <img src="Images/icons8-uplay-app.svg" alt="logo" id="logo" />
+            <a class="navbar-brand" href="#">GameMode ON</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >MMORPG</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SHOOTER</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SAILING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PERMADEATH</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SUPERHERO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PIXEL</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- NavBar -->
+
+        <!-- Games Cards Section  -->
+        <section id="gamesCardSection">
+          <div class="row g-4 mb-5" id="cardGames"></div>
+        </section>
+        <!-- Games Cards Section  -->
+      </div>
+    </section>
+    <!-- Games Section -->
+
+    <!-- Details Section -->
+    <section id="details">
+      <i
+        class="fa-regular fa-circle-xmark position-absolute fs-5"
+        id="closeBtn"
+      >
+      </i>
+
+      <div class="container mt-4">
+        <h3 class="text-info">Details Game</h3>
+        <div
+          class="row row-games mt-4 justify-content-center align-items-center"
+        >
+          <div class="col-md-4">
+            <div class="content">
+              <img
+                src="Images/thumbnail.jpg"
+                alt=""
+                id="detailsImage"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="content text-white">
+              <h2>Title: <span id="title"></span></h2>
+              <p>
+                Category:
+                <span id="category" class="badge text-bg-primary"></span>
+              </p>
+              <p>
+                Platform:
+                <span id="platform" class="badge text-bg-primary"></span>
+              </p>
+              <p>
+                Status:
+                <span id="status" class="badge text-bg-primary"></span>
+              </p>
+              <p id="detailsOfGame"></p>
+              <a href="" class="btn btn-outline-danger" id="link">Show Game</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Details Section -->
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-3.6.3.min.js"></script>
+    <script src="JS/ui.module.js" type="module"></script>
+  </body>
+</html>
