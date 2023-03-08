@@ -9,6 +9,7 @@ export class UI {
     const game = new Game();
     const gameData = await game.getGames(cat);
     $("#cardGames").html(""); // clear cardGames section
+    await this.hideLoader("#games");
 
     // Display All Games
     for (const iterator of gameData) {
@@ -41,7 +42,6 @@ export class UI {
     </div>
   </div>`);
     }
-    await this.hideLoader("#games");
 
     $(".card").click(async (e) => {
       this.showDetails(e);
@@ -78,16 +78,16 @@ export class UI {
   }
 
   async showLoader(section) {
-    $("body").css("overflow", "hidden");
     $("#loader").fadeIn(1000, function () {
+      $("body").css("overflow", "hidden");
       $(`${section}`).fadeOut(1000);
     });
   }
 
   async hideLoader(section) {
-    $("body").css("overflow", "auto");
     $(document).ready(function () {
       $("#loader").fadeOut(1000, function () {
+        $("body").css("overflow", "auto");
         $(`${section}`).fadeIn(1000);
       });
     });
@@ -97,6 +97,7 @@ export class UI {
 const ui = new UI();
 ui.showGames("MMORPG");
 $(".nav-item").click((element) => {
+  $("body").css("overflow", "hidden");
   let cat = $(element.target).html();
   ui.showGames(cat);
   $(".nav-link").removeClass("active").css({ "font-weight": "400" });
