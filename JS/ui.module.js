@@ -49,7 +49,6 @@ export class UI {
   }
 
   async showDetails(e) {
-    await this.showLoader("#details");
     const gameId = $(e.target).offsetParent().attr("id");
     const detail = new Detail();
     const gameDetail = await detail.getDetails(gameId);
@@ -65,7 +64,6 @@ export class UI {
         .attr("href", gameDetail.game_url)
         .attr("target", "_blank");
     })();
-    await this.hideLoader("#details");
 
     $("#games").fadeOut(500, function () {
       $("#details").fadeIn(500);
