@@ -57,4 +57,5 @@ This project is licensed under the MIT License.
 ## Images
 
 ![GameMode ON HomePage](Images/Screenshot%202023-04-14%20190711.png)
+
 ![GameMode ON DetailsPage](Images/Screenshot%202023-04-14%20190727.png)
